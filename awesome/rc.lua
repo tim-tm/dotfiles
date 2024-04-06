@@ -233,7 +233,25 @@ clientkeys = gears.table.join(
             c.maximized_horizontal = not c.maximized_horizontal
             c:raise()
         end ,
-        {description = "(un)maximize horizontally", group = "client"})
+        {description = "(un)maximize horizontally", group = "client"}),
+    awful.key({}, "XF86AudioPlay", function()
+        awful.util.spawn("playerctl play-pause")
+    end, {}),
+    awful.key({}, "XF86AudioNext", function()
+        awful.util.spawn("playerctl next")
+    end, {}),
+    awful.key({}, "XF86AudioPrev", function()
+        awful.util.spawn("playerctl previous")
+    end, {}),
+    awful.key({}, "XF86AudioRaiseVolume", function()
+        awful.util.spawn("playerctl volume 0.05+")
+    end, {}),
+    awful.key({}, "XF86AudioLowerVolume", function()
+        awful.util.spawn("playerctl volume 0.05-")
+    end, {}),
+    awful.key({}, "XF86AudioMute", function()
+        awful.util.spawn("playerctl stop")
+    end, {})
 )
 
 -- Bind all key numbers to tags.

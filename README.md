@@ -19,3 +19,4 @@ Additional:
 - JetBrainsMono Nerd Font
 - Gruvbox icon theme
 - Noto Emoji Font
+- playerctl
