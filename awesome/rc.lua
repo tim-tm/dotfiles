@@ -244,10 +244,10 @@ clientkeys = gears.table.join(
         awful.util.spawn("playerctl previous")
     end, {}),
     awful.key({}, "XF86AudioRaiseVolume", function()
-        awful.util.spawn("playerctl volume 0.05+")
+        awful.util.spawn("amixer sset Master 5%+")
     end, {}),
     awful.key({}, "XF86AudioLowerVolume", function()
-        awful.util.spawn("playerctl volume 0.05-")
+        awful.util.spawn("amixer sset Master 5%-")
     end, {}),
     awful.key({}, "XF86AudioMute", function()
         awful.util.spawn("playerctl stop")

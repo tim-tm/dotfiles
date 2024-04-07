@@ -20,3 +20,4 @@ Additional:
 - Gruvbox icon theme
 - Noto Emoji Font
 - playerctl
+- alsa-utils
