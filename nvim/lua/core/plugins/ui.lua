@@ -21,7 +21,7 @@ return {
             local lazy_status = require("lazy.status")
             require("lualine").setup({
                 options = {
-                    theme = "gruvbox-baby"
+                    theme = "bamboo"
                 },
                 sections = {
                     lualine_a = {

@@ -6,13 +6,16 @@ return {
         config = true
     },
     {
-        "luisiacc/gruvbox-baby",
+        "ribru17/bamboo.nvim",
         lazy = false,
-        setup = {},
-        config = function ()
-            vim.o.termguicolors = true
-            vim.g.gruvbox_baby_background_color = "dark"
-            vim.cmd [[ colorscheme gruvbox-baby ]]
-        end
+        priority = 1000,
+        config = function()
+            require("bamboo").setup({
+                code_style = {
+                    functions = { bold = true }
+                }
+            })
+            require("bamboo").load()
+        end,
     }
 }
