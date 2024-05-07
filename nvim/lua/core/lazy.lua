@@ -14,9 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 return require("lazy").setup({
     { import = "core.plugins" }
 }, {
-    install = {
-        colorscheme = { "gruvbox-material" }
-    },
     checker = {
         enabled = true,
         notify = false

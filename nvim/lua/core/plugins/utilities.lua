@@ -10,10 +10,6 @@ return {
         }
     },
     {
-        "andweeb/presence.nvim",
-        opts = {}
-    },
-    {
         "folke/which-key.nvim",
         event = "VeryLazy",
         init = function()
