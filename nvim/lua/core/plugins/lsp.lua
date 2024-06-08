@@ -8,7 +8,7 @@ return {
         "williamboman/mason-lspconfig.nvim",
         event = { "BufReadPre", "BufNewFile" },
         opts = {
-            ensure_installed = { "lua_ls", "clangd", "cmake", "rust_analyzer", "jdtls", "jsonls", "texlab", "marksman", "tsserver", "zls" }
+            ensure_installed = { "lua_ls", "clangd", "neocmake", "rust_analyzer", "jdtls", "jsonls", "texlab", "marksman", "tsserver", "zls" }
         }
     },
     {
@@ -44,7 +44,7 @@ return {
                 }
             }
 
-            lspconfig.cmake.setup {
+            lspconfig.neocmake.setup {
                 on_attach = on_attach,
                 capabilities = capabilities
             }
