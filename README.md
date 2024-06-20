@@ -9,6 +9,7 @@ Simple dotfiles in a gruvbox style that contain configurations for the following
 - polybar
 - rofi
 - kitty
+- zathura
 
 ## Dependencies
 
@@ -21,3 +22,4 @@ Additional:
 - Noto Emoji Font
 - playerctl
 - alsa-utils
+- ripgrep (nvim-telescope)

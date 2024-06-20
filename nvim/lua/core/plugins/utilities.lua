@@ -32,6 +32,7 @@ return {
                     "-synctex=1"
                 }
             }
+            vim.g.vimtex_view_method = "zathura"
         end
     }
 }
