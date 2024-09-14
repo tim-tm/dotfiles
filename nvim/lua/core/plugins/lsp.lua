@@ -17,7 +17,7 @@ return {
                 "jsonls",
                 "texlab",
                 "marksman",
-                "tsserver",
+                "ts_ls",
                 "zls",
                 "pylsp"
             }
@@ -91,7 +91,7 @@ return {
                 capabilities = capabilities
             }
 
-            lspconfig.tsserver.setup {
+            lspconfig.ts_ls.setup {
                 on_attach = on_attach,
                 capabilities = capabilities
             }
