@@ -188,8 +188,8 @@ globalkeys = gears.table.join(
               {description = "run prompt", group = "launcher"}),
 
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+    awful.key({ modkey }, "p", function() awful.spawn.with_shell("~/.config/awesome/passrun.sh") end,
+              {description = "run password selector", group = "launcher"})
 )
 
 clientkeys = gears.table.join(
