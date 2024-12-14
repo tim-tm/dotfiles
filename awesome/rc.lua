@@ -186,9 +186,7 @@ globalkeys = gears.table.join(
               {description = "run prompt", group = "launcher"}),
     awful.key({ modkey },            "e",     function () awful.spawn.with_shell("rofi -show emoji") end,
               {description = "run prompt", group = "launcher"}),
-
-    -- Menubar
-    awful.key({ modkey }, "p", function() awful.spawn.with_shell("~/.config/awesome/passrun.sh") end,
+    awful.key({ modkey }, "p", function() awful.spawn.with_shell("~/.config/rofi/passrun.sh") end,
               {description = "run password selector", group = "launcher"})
 )
 
