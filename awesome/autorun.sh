@@ -8,5 +8,4 @@ run() {
 }
 
 run picom
-run nm-applet
 exec ~/.config/polybar/launch.sh

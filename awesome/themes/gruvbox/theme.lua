@@ -5,7 +5,7 @@
 
 local dpi = require("beautiful.xresources").apply_dpi
 local config_dir = string.format("%s/.config/awesome", os.getenv("HOME"))
-local wallpaper_path = string.format("%s/themes/gruvbox/wallpapers/1.png", config_dir)
+local wallpaper_path = string.format("%s/themes/gruvbox/wallpapers/2.png", config_dir)
 
 local theme = {}
 
