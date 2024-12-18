@@ -187,11 +187,13 @@ globalkeys = gears.table.join(
               {description = "run prompt", group = "launcher"}),
     awful.key({ modkey },            "e",     function () awful.spawn.with_shell("rofi -show emoji") end,
               {description = "run prompt", group = "launcher"}),
-    awful.key({ modkey }, "p", function() awful.spawn.with_shell("~/.config/rofi/passrun.sh") end,
+    awful.key({ modkey }, "p", function() awful.spawn.with_shell("~/.config/rofi/scripts/passrun.sh") end,
               {description = "run password selector", group = "launcher"}),
 
     awful.key({ modkey }, "l", function() awful.spawn.with_shell("slock") end,
-              {description = "run lockscreen", group = "client"})
+              {description = "run lockscreen", group = "client"}),
+    awful.key({ modkey }, "q", function() awful.spawn.with_shell("~/.config/rofi/scripts/quit.sh") end,
+              {description = "run quit menu", group = "client"})
 )
 
 clientkeys = gears.table.join(
