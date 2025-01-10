@@ -5,17 +5,20 @@ return {
         dependencies = { "nvim-lua/plenary.nvim" },
         config = true
     },
+    -- {
+    --     "ficcdaf/ashen.nvim",
+    --     lazy = false,
+    --     priority = 1000,
+    --     config = function()
+    --         require("ashen").load()
+    --     end
+    -- },
     {
-        "ribru17/bamboo.nvim",
+        "savq/melange-nvim",
         lazy = false,
         priority = 1000,
         config = function()
-            require("bamboo").setup({
-                code_style = {
-                    functions = { bold = true }
-                }
-            })
-            require("bamboo").load()
-        end,
+            vim.cmd.colorscheme "melange"
+        end
     }
 }
