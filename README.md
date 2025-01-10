@@ -23,3 +23,4 @@ Additional:
 - playerctl
 - alsa-utils
 - ripgrep (nvim-telescope)
+- i3lock
