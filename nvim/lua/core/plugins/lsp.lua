@@ -2,7 +2,7 @@ return {
     {
         "williamboman/mason.nvim",
         event = { "BufReadPre", "BufNewFile" },
-        config = true
+        config = true,
     },
     {
         "williamboman/mason-lspconfig.nvim",
@@ -19,9 +19,9 @@ return {
                 "marksman",
                 "ts_ls",
                 "zls",
-                "pylsp"
-            }
-        }
+                "pylsp",
+            },
+        },
     },
     {
         "neovim/nvim-lspconfig",
@@ -40,73 +40,71 @@ return {
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
             local lspconfig = require("lspconfig")
 
-            lspconfig.lua_ls.setup {
+            lspconfig.lua_ls.setup({
                 on_attach = on_attach,
-                capabilities = capabilities
-            }
+                capabilities = capabilities,
+            })
 
-            lspconfig.clangd.setup {
+            lspconfig.clangd.setup({
                 on_attach = on_attach,
                 capabilities = capabilities,
                 cmd = {
                     "clangd",
                     "--background-index",
                     "--clang-tidy",
-                    "--header-insertion=iwyu"
-                }
-            }
+                    "--header-insertion=iwyu",
+                },
+            })
 
-            lspconfig.neocmake.setup {
+            lspconfig.neocmake.setup({
                 on_attach = on_attach,
-                capabilities = capabilities
-            }
+                capabilities = capabilities,
+            })
 
-            lspconfig.jdtls.setup {
+            lspconfig.jdtls.setup({
                 on_attach = on_attach,
-                capabilities = capabilities
-            }
+                capabilities = capabilities,
+            })
 
-            lspconfig.jsonls.setup {
+            lspconfig.jsonls.setup({
                 on_attach = on_attach,
-                capabilities = capabilities
-            }
+                capabilities = capabilities,
+            })
 
-            lspconfig.texlab.setup {
+            lspconfig.texlab.setup({
                 on_attach = on_attach,
-                capabilities = capabilities
-            }
+                capabilities = capabilities,
+            })
 
-            lspconfig.marksman.setup {
+            lspconfig.marksman.setup({
                 on_attach = on_attach,
-                capabilities = capabilities
-            }
+                capabilities = capabilities,
+            })
 
-            lspconfig.rust_analyzer.setup {
+            lspconfig.rust_analyzer.setup({
                 on_attach = on_attach,
-                capabilities = capabilities
-            }
+                capabilities = capabilities,
+            })
 
-            lspconfig.glslls.setup {
+            lspconfig.glslls.setup({
                 on_attach = on_attach,
-                capabilities = capabilities
-            }
+                capabilities = capabilities,
+            })
 
-            lspconfig.ts_ls.setup {
+            lspconfig.ts_ls.setup({
                 on_attach = on_attach,
-                capabilities = capabilities
-            }
+                capabilities = capabilities,
+            })
 
-            lspconfig.zls.setup {
+            lspconfig.zls.setup({
                 on_attach = on_attach,
-                capabilities = capabilities
-            }
+                capabilities = capabilities,
+            })
 
-            lspconfig.pylsp.setup {
+            lspconfig.pylsp.setup({
                 on_attach = on_attach,
-                capabilities = capabilities
-            }
-        end
-    }
+                capabilities = capabilities,
+            })
+        end,
+    },
 }
-
-
