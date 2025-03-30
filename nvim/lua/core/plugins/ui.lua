@@ -78,6 +78,7 @@ return {
 			{ "<leader>fb", "<cmd>Telescope buffers<CR>" },
 			{ "<leader>fh", "<cmd>Telescope help_tags<CR>" },
 			{ "<leader>ftd", "<cmd>TodoTelescope <CR>" },
+			{ "<leader>fd", "<cmd>Telescope diagnostics<CR>" },
 		},
 	},
 	{
