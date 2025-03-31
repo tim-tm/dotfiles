@@ -1,26 +1,30 @@
-# awesome dotfiles
+# dotfiles
 
+## awesomewm (X11)
 ![sc](https://github.com/tim-tm/dotfiles/assets/43402731/edb20b18-8b3d-4659-8f43-11af4a25b86b)
 
-Simple dotfiles in a gruvbox style that contain configurations for the following programs:
-
-- AwesomeWM
-- neovim
-- polybar
-- rofi
-- kitty
-- zathura
-
-## Dependencies
-
-All of the above listed tools should of course be installed.
-Additional:
-
+### dependencies
 - picom
-- JetBrainsMono Nerd Font
 - Gruvbox icon theme
 - Noto Emoji Font
 - playerctl
-- alsa-utils
-- ripgrep (nvim-telescope)
 - i3lock
+- polybar
+
+## swaywm (Wayland)
+![sc2](assets/sway.png)
+
+### dependencies
+- swayidle
+- swaylock
+- waybar
+- grim
+
+## shared dependencies
+- JetBrainsMono Nerd Font
+- neovim
+  - ripgrep (nvim-telescope)
+- rofi
+- kitty
+- zathura
+- alsa-utils
