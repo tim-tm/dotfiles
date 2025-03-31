@@ -78,6 +78,9 @@ return {
 			{ "<leader>fh", "<cmd>Telescope help_tags<CR>" },
 			{ "<leader>ftd", "<cmd>TodoTelescope <CR>" },
 			{ "<leader>fd", "<cmd>Telescope diagnostics<CR>" },
+			{ "<leader>fvb", "<cmd>Telescope git_branches<CR>" },
+			{ "<leader>fvs", "<cmd>Telescope git_status<CR>" },
+			{ "<leader>fvc", "<cmd>Telescope git_commits<CR>" },
 		},
 	},
 	{
