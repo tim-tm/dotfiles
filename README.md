@@ -1,7 +1,7 @@
 # dotfiles
 
 ## awesomewm (X11)
-![sc](https://github.com/tim-tm/dotfiles/assets/43402731/edb20b18-8b3d-4659-8f43-11af4a25b86b)
+![sc](assets/awesome.png)
 
 ### dependencies
 - picom
