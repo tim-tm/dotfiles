@@ -102,4 +102,13 @@ return {
 			vim.keymap.set("n", "<leader>blp", ":BufferLinePick<CR>")
 		end,
 	},
+	{
+		"lewis6991/gitsigns.nvim",
+		config = function()
+			require("gitsigns").setup()
+		end,
+	},
+	{
+		"tpope/vim-fugitive",
+	},
 }
