@@ -70,7 +70,6 @@ return {
 	},
 	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.8",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		keys = {
 			{ "<leader>ff", "<cmd>Telescope find_files<CR>" },
@@ -84,7 +83,6 @@ return {
 	{
 		"akinsho/bufferline.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-		version = "*",
 		event = { "BufReadPre", "BufNewFile" },
 		config = function()
 			require("bufferline").setup({
@@ -102,40 +100,6 @@ return {
 				},
 			})
 			vim.keymap.set("n", "<leader>blp", ":BufferLinePick<CR>")
-		end,
-	},
-	{
-		"toppair/peek.nvim",
-		event = { "VeryLazy" },
-		build = "deno task --quiet build:fast",
-		config = function()
-			require("peek").setup({
-				auto_load = true,
-				close_on_bdelete = true,
-				syntax = true,
-				theme = "dark",
-				update_on_change = true,
-				app = "browser",
-				filetype = { "markdown" },
-				throttle_at = 200000,
-				throttle_time = "auto",
-			})
-			vim.api.nvim_create_user_command("PeekOpen", require("peek").open, {})
-			vim.api.nvim_create_user_command("PeekClose", require("peek").close, {})
-		end,
-	},
-	{
-		"tanvirtin/vgit.nvim",
-		dependencies = { "nvim-lua/plenary.nvim" },
-		keys = {
-			{ "<leader>gdf", "<cmd>VGit project_diff_preview<CR>" },
-		},
-		config = function()
-			vim.o.updatetime = 300
-			vim.o.incsearch = false
-			vim.wo.signcolumn = "yes"
-
-			require("vgit").setup()
 		end,
 	},
 }

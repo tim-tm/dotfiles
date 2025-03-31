@@ -1,15 +1,5 @@
 return {
 	{
-		"akinsho/toggleterm.nvim",
-		keys = {
-			{ "<leader>th", "<cmd>ToggleTerm size=30 direction=horizontal<CR>" },
-			{ "<leader>tv", "<cmd>ToggleTerm size=100 direction=vertical<CR>" },
-		},
-		opts = {
-			shade_terminals = false,
-		},
-	},
-	{
 		"folke/which-key.nvim",
 		event = "VeryLazy",
 		init = function()

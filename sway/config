@@ -30,7 +30,7 @@ bindsym $mod+Return exec $term
 bindsym $mod+Shift+c kill
 bindsym $mod+r exec $menu
 
-bindsym $mod+s exec swaylock -f -c 202020 --indicator-radius 20
+bindsym $mod+Ctrl+l exec swaylock -f -c 202020 --indicator-radius 20
 
 floating_modifier $mod normal
 

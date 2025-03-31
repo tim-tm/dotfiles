@@ -6,12 +6,12 @@ return {
 		config = true,
 	},
 	-- {
-	--     "ficcdaf/ashen.nvim",
-	--     lazy = false,
-	--     priority = 1000,
-	--     config = function()
-	--         require("ashen").load()
-	--     end
+	-- 	"ficcdaf/ashen.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	config = function()
+	-- 		require("ashen").load()
+	-- 	end,
 	-- },
 	{
 		"savq/melange-nvim",
