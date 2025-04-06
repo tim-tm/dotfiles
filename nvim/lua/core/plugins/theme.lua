@@ -5,14 +5,6 @@ return {
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = true,
 	},
-	-- {
-	-- 	"ficcdaf/ashen.nvim",
-	-- 	lazy = false,
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		require("ashen").load()
-	-- 	end,
-	-- },
 	{
 		"savq/melange-nvim",
 		lazy = false,
