@@ -21,7 +21,7 @@ exec swayidle -w \
          before-sleep 'swaylock -f -c 202020'
 
 ### Input configuration
-input "3141:30211:USB_Keyboard" {
+input type:keyboard {
     xkb_layout de
 }
 
