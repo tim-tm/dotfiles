@@ -60,16 +60,19 @@ tooltip {
     border: 2px solid #c7ab7a;
 }
 
+/*
 #battery {
     background-color: #a9b665;
     border: 2px solid #c7ab7a;
     color: #6c782e;
 }
+*/
 
 #cpu,
 #memory,
 #network,
-#pulseaudio {
+#pulseaudio,
+#battery {
     /*background-color: #ddc7a1;*/
     /*border: 2px solid #c7ab7a;*/
     color: #ddc7a1; /*#1d2021*/

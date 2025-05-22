@@ -11,6 +11,7 @@ set $menu rofi -show drun
 
 ### Output configuration
 output * bg #202020 solid_color
+output * scale 1.2
 output HDMI-A-1 resolution 1920x1080@60Hz position 0,0
 output DVI-D-1 resolution 1280x1024@75Hz position 1920,0
 
