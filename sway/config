@@ -30,6 +30,8 @@ input type:keyboard {
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+c kill
 bindsym $mod+r exec $menu
+bindsym $mod+e exec rofi -show emoji
+bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort
 
 bindsym $mod+Ctrl+l exec swaylock -f -c 202020 --indicator-radius 20
 

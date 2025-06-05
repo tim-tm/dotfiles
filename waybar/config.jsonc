@@ -49,7 +49,7 @@
         }
     },
     "battery": {
-        "format": "bat {capacity}%",
+        "format": "bat {capacity}% ({time})",
         "interval": 5,
         "states": {
             "warning": 20,
@@ -57,11 +57,12 @@
             "urgent": 5
         },
         "tooltip": false,
-        "format-charging": "bat {capacity}% 󰂄"
+        "format-charging": "bat {capacity}% 󰂄",
+        "format-time": "{H}:{m}h"
     },
     "network": {
         "format-wifi": "wifi {signalStrength}%",
-        "format-ethernet": "enth {bandwidthDownBits}",
+        "format-ethernet": "eth {bandwidthDownBits}",
         "format-disconnected": "no network",
         "interval": 5,
         "tooltip": false
