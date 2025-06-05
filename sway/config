@@ -26,6 +26,10 @@ input type:keyboard {
     xkb_layout de
 }
 
+input type:touchpad {
+    natural_scroll disabled
+}
+
 ### Key bindings
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+c kill
