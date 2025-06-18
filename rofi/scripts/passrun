@@ -1,12 +1,12 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-set -xe
+set -e
 
 cd ~/.password-store
-fl=$(find . -name \*.gpg -print | rofi -dmenu)
+fl="$(find . -name '*.gpg' -print | rofi -dmenu -p "pass")"
 nm="${fl%.*}"
 
-sel=$(printf "pw\notp\n" | rofi -dmenu)
+sel="$(printf "pw\notp\n" | rofi -dmenu -p "type")"
 case $sel in
     pw)
         pass -c ${nm}

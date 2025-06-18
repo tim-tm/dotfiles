@@ -27,7 +27,7 @@ input type:keyboard {
 }
 
 input type:touchpad {
-    natural_scroll disabled
+    natural_scroll enabled
 }
 
 ### Key bindings
@@ -36,8 +36,10 @@ bindsym $mod+Shift+c kill
 bindsym $mod+r exec $menu
 bindsym $mod+e exec rofi -show emoji
 bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort
+bindsym $mod+q exec ~/.config/rofi/scripts/quit
+bindsym $mod+p exec ~/.config/rofi/scripts/passrun
 
-bindsym $mod+Ctrl+l exec swaylock -f -c 202020 --indicator-radius 20
+bindsym $mod+Ctrl+l exec swaylock -f -c 202020
 
 floating_modifier $mod normal
 
