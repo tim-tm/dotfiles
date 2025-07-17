@@ -1,0 +1,14 @@
+profile home_dock {
+    output "AU Optronics 0x103D Unknown" mode 1920x1080@60Hz position 0,0
+    exec swaymsg workspace 1, move workspace to eDP-1
+
+    output "AOC 24B1W GMXJ5HA067240" mode 1920x1080@60Hz position 1920,0
+    exec swaymsg workspace 2, move workspace to DP-4
+
+    output "AOC 1960R FMJE3HA055231" mode 1280x1024@75Hz position 3840,0
+    exec swaymsg workspace 3, move workspace to DP-7
+}
+
+profile t480 {
+    output "AU Optronics 0x103D Unknown" mode 1920x1080@60Hz position 0,0
+}
