@@ -1,0 +1,13 @@
+[Unit]
+Description=Idle manager for swaywm
+Documentation=man:swayidle(1)
+BindsTo=sway-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/swayidle -w \
+            timeout 300 '/usr/bin/swaylock -f -c 202020' \
+            before-sleep '/usr/bin/swaylock -f -c 202020'
+
+[Install]
+WantedBy=sway-session.target

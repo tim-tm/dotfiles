@@ -1,0 +1,11 @@
+[Unit]
+Description=Wayland bar for Sway and Wlroots based compositors
+Documentation=man:waybar(1)
+BindsTo=sway-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/waybar
+
+[Install]
+WantedBy=sway-session.target

@@ -1,3 +1,5 @@
+include ~/.config/sway/config.d/*
+
 ### Variables
 set $mod Mod4
 
@@ -11,12 +13,6 @@ set $menu rofi -show drun
 
 ### Output configuration
 output * bg #202020 solid_color
-output * scale 1
-
-### Idle configuration
-exec swayidle -w \
-         timeout 300 'swaylock -f -c 202020' \
-         before-sleep 'swaylock -f -c 202020'
 
 ### Input configuration
 input type:keyboard {
@@ -126,8 +122,4 @@ font pango:JetBrainsMono Nerd Font Semi-Bold 9
 
 gaps inner 10
 
-bar {
-    swaybar_command waybar
-}
-
-include ~/.config/sway/config.d/*
+exec_always systemctl --user start sway-session.target
