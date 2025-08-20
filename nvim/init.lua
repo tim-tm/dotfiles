@@ -29,7 +29,7 @@ vim.pack.add({
 	{ src = "https://github.com/stevearc/oil.nvim" },
 	{ src = "https://github.com/echasnovski/mini.pick" },
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
-	{ src = "https://github.com/Saghen/blink.cmp",     version = vim.version.range("1.0") },
+	{ src = "https://github.com/Saghen/blink.cmp",     version = "v1.6.0" },
 })
 
 require("mini.pick").setup()
@@ -47,45 +47,25 @@ require("blink.cmp").setup({
 	signature = { enabled = true },
 })
 
-local on_attach = function(_, _)
-	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
-	vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
-
-	vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
-	vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
-	vim.keymap.set("n", "gr", vim.lsp.buf.references, {})
-	vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-end
-
-local capabilities = require("blink.cmp").get_lsp_capabilities()
-local lspconfig = require("lspconfig")
-
-lspconfig.clangd.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-	cmd = {
-		"clangd",
-		"--background-index",
-		"--clang-tidy",
-		"--header-insertion=iwyu",
-	},
-})
-
-lspconfig.ruff.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
-lspconfig.lua_ls.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-})
-
 vim.keymap.set("n", "<leader>ff", ":Pick files<CR>")
 vim.keymap.set("n", "<leader>fb", ":Pick buffers<CR>")
 vim.keymap.set("n", "<leader>fg", ":Pick grep_live<CR>")
 
-vim.lsp.enable({ "lua_ls", "ruff", "clangd" })
+vim.lsp.enable({ "lua_ls", "ruff", "clangd", "tinymist" })
+vim.lsp.config("lua_ls", {
+	settings = {
+		Lua = {
+			workspace = {
+				library = vim.api.nvim_get_runtime_file("", true)
+			}
+		}
+	}
+})
+vim.lsp.config("tinymist", {
+	settings = {
+		formatterMode = "typstyle"
+	}
+})
 vim.keymap.set("n", "<leader>mp", vim.lsp.buf.format)
 
 vim.b.virtual_lines_enabled = vim.b.virtual_lines_enabled or false
