@@ -61,7 +61,7 @@
         "format-time": "{H}:{m}h"
     },
     "network": {
-        "format-wifi": "wifi {signalStrength}%",
+        "format-wifi": "wifi '{essid}' {signalStrength}%",
         "format-ethernet": "eth {bandwidthDownBits}",
         "format-disconnected": "no network",
         "interval": 5,
