@@ -29,7 +29,7 @@ vim.pack.add({
 	{ src = "https://github.com/stevearc/oil.nvim" },
 	{ src = "https://github.com/echasnovski/mini.pick" },
 	{ src = "https://github.com/neovim/nvim-lspconfig" },
-	{ src = "https://github.com/Saghen/blink.cmp",             version = "v1.6.0" },
+	{ src = "https://github.com/Saghen/blink.cmp",     version = "v1.7.0" },
 })
 
 require("mini.pick").setup()
@@ -51,7 +51,14 @@ vim.keymap.set("n", "<leader>ff", ":Pick files<CR>")
 vim.keymap.set("n", "<leader>fb", ":Pick buffers<CR>")
 vim.keymap.set("n", "<leader>fg", ":Pick grep_live<CR>")
 
-vim.lsp.enable({ "lua_ls", "ruff", "clangd", "tinymist" })
+vim.lsp.enable({
+	"lua_ls",
+	"ruff",
+	"clangd",
+	"tinymist",
+	"rust_analyzer",
+	"nil_ls"
+})
 vim.lsp.config("lua_ls", {
 	settings = {
 		Lua = {
@@ -63,7 +70,7 @@ vim.lsp.config("lua_ls", {
 })
 vim.lsp.config("tinymist", {
 	settings = {
-		formatterMode = "typstyle"
+		formatterMode = "typstyle",
 	}
 })
 vim.keymap.set("n", "<leader>mp", vim.lsp.buf.format)
