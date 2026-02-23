@@ -57,7 +57,8 @@ vim.lsp.enable({
 	"clangd",
 	"tinymist",
 	"rust_analyzer",
-	"nil_ls"
+	"nil_ls",
+	"texlab"
 })
 vim.lsp.config("lua_ls", {
 	settings = {
@@ -71,6 +72,13 @@ vim.lsp.config("lua_ls", {
 vim.lsp.config("tinymist", {
 	settings = {
 		formatterMode = "typstyle",
+	}
+})
+vim.lsp.config("nil_ls", {
+	settings = {
+		formatting = {
+			command = { "nixfmt" }
+		}
 	}
 })
 vim.keymap.set("n", "<leader>mp", vim.lsp.buf.format)
