@@ -83,6 +83,7 @@
 		"interval": 3600,
 		"tooltip": true,
 		"return-type": "json",
-		"exec": "python3 $HOME/.config/waybar/weather.py"
+		"exec": "python3 $HOME/.config/waybar/weather.py",
+		"exec-if": "nc -zw1 google.com 443"
 	}
 }
