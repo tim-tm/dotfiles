@@ -90,8 +90,8 @@
 	"custom/swaymode": {
 		"format": "swaymode {text}",
 		"max-length": 40,
-		"interval": 2,
-		"tooltip": false,
+		"interval": 1,
+		"tooltip": true,
 		"return-type": "json",
 		"exec": "$HOME/.config/waybar/swaymode.sh"
 	}
