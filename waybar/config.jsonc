@@ -14,6 +14,7 @@
     ],
     "modules-right": [
         "tray",
+		"custom/swaymode",
 		"custom/weather",
         "cpu",
         "memory",
@@ -85,5 +86,13 @@
 		"return-type": "json",
 		"exec": "python3 $HOME/.config/waybar/weather.py",
 		"exec-if": "nc -zw1 google.com 443"
+	},
+	"custom/swaymode": {
+		"format": "swaymode {text}",
+		"max-length": 40,
+		"interval": 2,
+		"tooltip": false,
+		"return-type": "json",
+		"exec": "$HOME/.config/waybar/swaymode.sh"
 	}
 }

@@ -25,7 +25,8 @@ tooltip {
 #battery,
 #network,
 #pulseaudio,
-#custom-weather {
+#custom-weather,
+#custom-swaymode {
     margin: 6px 6px 6px 0px;
     padding: 2px 8px;
 }
@@ -74,7 +75,8 @@ tooltip {
 #network,
 #pulseaudio,
 #battery,
-#custom-weather {
+#custom-weather,
+#custom-swaymode {
     /*background-color: #ddc7a1;*/
     /*border: 2px solid #c7ab7a;*/
     color: #ddc7a1; /*#1d2021*/
