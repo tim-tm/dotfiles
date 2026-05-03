@@ -35,12 +35,13 @@ vim.keymap.set({ "n", "v", "x" }, "<leader>y", "\"+y")
 
 vim.pack.add({
     { src = "https://github.com/savq/melange-nvim" },
-    { src = "https://github.com/echasnovski/mini.pick" },
+    { src = "https://github.com/nvim-mini/mini.nvim" },
     { src = "https://github.com/neovim/nvim-lspconfig" },
     { src = "https://github.com/Saghen/blink.cmp",     version = "v1.10.2" },
 })
 
 require("mini.pick").setup()
+require("mini.extra").setup()
 require("blink.cmp").setup({
     keymap = {
         preset = "default",
@@ -60,6 +61,7 @@ require("blink.cmp").setup({
 vim.keymap.set("n", "<leader>ff", ":Pick files<CR>")
 vim.keymap.set("n", "<leader>fb", ":Pick buffers<CR>")
 vim.keymap.set("n", "<leader>fg", ":Pick grep_live<CR>")
+vim.keymap.set("n", "<leader>fd", ":Pick diagnostic<CR>")
 
 vim.lsp.enable({
     "lua_ls",
