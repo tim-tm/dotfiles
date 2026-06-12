@@ -1,6 +1,5 @@
 include ~/.config/sway/config.d/*
 
-### Variables
 set $mod Mod4
 
 set $left h
@@ -11,10 +10,10 @@ set $right l
 set $term kitty
 set $menu rofi -show drun
 
-### Output configuration
-output * bg #202020 solid_color
+exec_always DIR="$HOME/.config/sway/wallpaper" ~/.config/sway/scripts/randomize_wallpaper
 
-### Input configuration
+output * bg ~/.config/sway/wallpaper/current fit #282828
+
 input type:keyboard {
     xkb_layout de
 }
@@ -23,7 +22,6 @@ input type:touchpad {
     natural_scroll enabled
 }
 
-### Key bindings
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+c kill
 bindsym $mod+r exec $menu
@@ -122,4 +120,5 @@ font pango:JetBrainsMono Nerd Font Semi-Bold 9
 
 gaps inner 10
 
-exec_always systemctl --user start sway-session.target
+exec waybar
+exec swayidle -w timeout 300 '~/.config/sway/scripts/lockscreen' before-sleep '~/.config/sway/scripts/lockscreen'

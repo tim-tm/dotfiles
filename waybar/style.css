@@ -10,12 +10,10 @@
 
 window#waybar {
     background: #1d2021;
-    border: 2px solid #3c3836;
 }
 
 tooltip {
     background-color: #1d2021;
-    border: 2px solid #7c6f64;
 }
 
 #clock,

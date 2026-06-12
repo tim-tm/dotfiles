@@ -74,6 +74,7 @@ vim.lsp.enable({
     "html",
     "denols",
     "jdtls",
+    "bashls"
 })
 
 vim.lsp.config("lua_ls", {

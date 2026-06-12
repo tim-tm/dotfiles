@@ -5,7 +5,7 @@ profile home_dock {
     output "AOC 1960R FMJE3HA055231" mode 1280x1024@75Hz position 1920,0
     exec swaymsg workspace 2, move workspace to DP-7
 
-	output "AOC 24B1W GMXJ5HA067240" mode 1920x1080@60Hz position 3200,0
+    output "AOC 24B1W GMXJ5HA067240" mode 1920x1080@60Hz position 3200,0
     exec swaymsg workspace 3, move workspace to DP-4
 }
 
