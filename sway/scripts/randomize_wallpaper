@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+
+DIR=${DIR:-"$HOME/.config/sway/wallpaper"}
+echo "Running in '$DIR'"
+
+echo "Wallpaper used to be '$(readlink "$DIR/current")'"
+rm -f "$DIR/current"
+
+file="$(
+    find "$DIR" -type f -name "*.JPG*" \
+        | sort --random-sort \
+        | head -n 1
+)"
+ln -s "$file" "$DIR/current"
+
+echo "Set wallpaper to '$file'"
