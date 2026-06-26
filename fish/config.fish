@@ -8,5 +8,7 @@ if status is-interactive
     end
     set -gx EDITOR nvim
     set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/ssh-agent.socket
+    set -gx SSH_ASKPASS $HOME/.config/fish/askpass.fish
+    set -gx SSH_ASKPASS_REQUIRE prefer
     fish_add_path ~/.nix-profile/bin
 end

@@ -4,3 +4,5 @@ set -xe
 
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 ssh-add -D && swaylock -f -c 202020
+
+gpg-connect-agent reloadagent /bye
