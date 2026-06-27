@@ -7,6 +7,12 @@ if test $argv_len -ge 1
         | grep -o "ssh/[^:' ]\+" \
         || return 1
     )
-    echo "Unlocking ssh key '$pass_name' using pass" 1>&2
+
+    # we have to redir to stderr to be able to see the message
+    # otherwise ssh will misinterpret as the password for the ssh key
+    printf "%s  Unlocking ssh key '$pass_name' using pass %s\n" \
+        "$(set_color --bold yellow)" \
+        "$(set_color normal)" \
+        1>&2
     pass "$pass_name"
 end
